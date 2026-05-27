@@ -3,6 +3,10 @@ This project is aimed to create a skincare website that accurately displays ingr
 
 After product information retrieval, the hardest part was cleaning data because of the amount of fluctuation there is for 6000+ products.
 
+## Web Scraping Requirements:
+- BeautifulSoup
+- Playwright
+
 ## Data Cleanup Essentials:
 - Python
 - Pandas
