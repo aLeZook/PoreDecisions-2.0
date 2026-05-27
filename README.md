@@ -1,16 +1,16 @@
-# React + Vite
+# Project Overview:
+This project is aimed to create a skincare website that accurately displays ingredients, research on those ingredients, product highlights, product information etc.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+After product information retrieval, the hardest part was cleaning data because of the amount of fluctuation there is for 6000+ products.
 
-Currently, two official plugins are available:
+## Data Cleanup Essentials:
+- Python
+- Pandas
+- Json
+- Regex (re)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Data Cleanup Process
+- Data Consists of strings of ingredients (One Whole String)
+- Usually and MOST products have ingredients separated by commas
+- Those products who don't need special edge case testing otherwise your code will fail or not display the right information on your website
+- Sometimes special symbols appear on some products so that is why we use regex to take those away easily. (Also works for leading and tailing periods, exclamations etc...)
